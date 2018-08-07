@@ -1,0 +1,22 @@
+<html>
+    <head>
+
+    </head>
+    <body style="padding: 300px">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <p>{{message}}</p>
+                {% endfor %}
+                <div style="background-color: red; width: 500px; height: auto; text-align: center;">
+                    <h1 style="color: white">Email is Not Valid!</h1>
+                </div>
+            {% endif %}
+        {% endwith %}
+        <h2 style="display: inline-block">Email</h2>
+        <form action="process", method="post" style="display: inline-block" >
+            <input type=text name="email">
+            <button>Submit</button>
+        </form>
+    </body>
+</html>

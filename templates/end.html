@@ -1,0 +1,16 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div style="width: 600px; height: auto; margin-left: 300px; background-color: rgb(125, 221, 125); text-align: center">
+            <h2>The email address you entered {{ email }} is a VALID email address! Thank You!</h2>
+        </div>
+        <h1 style="text-decoration: underline">Email Address Entered:</h1>
+        {% for x in emails %}
+        <h2 style="display: inline-block; margin-left: 200px;"> {{ x['email'] }}   {{ x['updated_at'] }}</h2>
+        <a href="/delete/{{x['id']}}">Delete</a>
+        <br>
+        {% endfor %}
+    </body>
+</html>
